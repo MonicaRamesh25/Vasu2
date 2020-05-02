@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("devopsmonica/Deployment")
+                    app = docker.build("devopsmonica/deployment")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
