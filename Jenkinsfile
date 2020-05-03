@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Git') {
-            steps { git 'https://github.com/MonicaRamesh25/vasu.git' }
+            steps { git 'https://github.com/MonicaRamesh25/vasu2.git' }
         }
 	stage('Build') {
 	            steps { sh label: '', script: 'mvn clean'
@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("devopsmonica/deployment")
+                    app = docker.build("devopsmonica/dockerdeploy2")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
