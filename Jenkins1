@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('SCM') {
          steps {
-            git 'https://github.com/MonicaRamesh25/Vasu2.git'
+            git 'https://github.com/pandian3k/vasu.git'
          }
       }
      stage ('Build') {
