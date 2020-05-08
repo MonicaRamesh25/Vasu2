@@ -5,8 +5,8 @@ pipeline {
             steps { git 'https://github.com/MonicaRamesh25/vasu2.git' }
         }
 	stage('Build') {
-	            steps { sh label: '', script: 'mvn clean'
-		            sh label: '', script: 'mvn install'}
+	            //steps { sh label: '', script: 'mvn clean'
+		steps { sh label: '', script: 'mvn install'}
 		            }
 
         stage('Build Docker Image') {
